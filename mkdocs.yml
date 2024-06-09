@@ -142,7 +142,7 @@ markdown_extensions:
 nav:
   - Home: 
     - Overview: "index.md"
-    - Quickstart: "sources/quickstart.md"
+    # - Quickstart: "sources/quickstart.md"
   - Development: 
     - Contributing: "contributing.md"
     - Security: "SECURITY.md"

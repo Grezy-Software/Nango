@@ -37,7 +37,7 @@ The workflow is simple:
     - [ ] Production docker compose (variables)
 - [ ] JWT
 - [ ] Semantic release
-- [ ] Mkdocs
+- [x] Mkdocs
 
 
 ### Bridge
