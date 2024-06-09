@@ -19,7 +19,6 @@ The workflow is simple:
 
 
 ## Todo
----
 
 ### Blue print
 
@@ -30,7 +29,12 @@ The workflow is simple:
     - [ ] Structure
     - [ ] Tools
 - [ ] JWT 
-
+- Github
+    - [ ] Dependabot (front & back)
+    - [ ] Pre-commit hook (ruff)
+- Docker
+    - [ ] Development docker compose (hard coded)
+    - [ ] Production docker compose (variables)
 
 ### Bridge
 

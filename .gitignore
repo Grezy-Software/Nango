@@ -85,6 +85,8 @@ venv.bak/
 .dmypy.json
 dmypy.json
 
+# Nango
+setup/requirements/full-requirements.txt
 
 # -------------------------------------------------------------------------------------------------
 # Frontend
