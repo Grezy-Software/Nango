@@ -29,12 +29,16 @@ The workflow is simple:
     - [ ] Structure
     - [ ] Tools
 - Github
-    - [ ] Dependabot (front & back)
+    - [x] Dependabot (front & back)
+    - [ ] CI (Tests, Lint, Build)
     - [ ] Pre-commit hook (ruff)
 - Docker
     - [ ] Development docker compose (hard coded)
     - [ ] Production docker compose (variables)
-- [ ] JWT 
+- [ ] JWT
+- [ ] Semantic release
+- [ ] Mkdocs
+
 
 ### Bridge
 
