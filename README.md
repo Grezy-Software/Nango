@@ -28,13 +28,13 @@ The workflow is simple:
 - NextJs
     - [ ] Structure
     - [ ] Tools
-- [ ] JWT 
 - Github
     - [ ] Dependabot (front & back)
     - [ ] Pre-commit hook (ruff)
 - Docker
     - [ ] Development docker compose (hard coded)
     - [ ] Production docker compose (variables)
+- [ ] JWT 
 
 ### Bridge
 
