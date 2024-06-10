@@ -8,13 +8,13 @@ updates:
       interval: "daily"
 
   - package-ecosystem: "npm"
-    directory: "/desktop-app/"
+    directory: "/frontend/"
     target-branch: "dev"
     schedule:
       interval: "daily"
 
   - package-ecosystem: "pip"
-    directory: "/requirements/"
+    directory: "/setup/requirements/"
     target-branch: "dev"
     schedule:
       interval: "daily"
