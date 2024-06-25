@@ -44,7 +44,6 @@ The workflow is simple:
 - [ ] Semantic release
 - [x] Mkdocs
 
-
 ### Bridge
 
 - Backend
