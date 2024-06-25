@@ -24,10 +24,16 @@ The workflow is simple:
 
 - Django
     - [ ] Structure
-    - [ ] Tools
+    - [ ] JWT
+    - [x] Ruff
+    - [x] Requirements
 - NextJs
     - [ ] Structure
-    - [ ] Tools
+    - [ ] Pnpm
+    - [ ] Tailwind
+    - [ ] Typescript
+    - [ ] Eslint
+    - [ ] Shadcn
 - Github
     - [x] Dependabot (front & back)
     - [ ] CI (Tests, Lint, Build)
@@ -35,7 +41,6 @@ The workflow is simple:
 - Docker
     - [ ] Development docker compose (hard coded)
     - [ ] Production docker compose (variables)
-- [ ] JWT
 - [ ] Semantic release
 - [x] Mkdocs
 

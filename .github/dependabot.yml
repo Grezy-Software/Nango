@@ -7,7 +7,7 @@ updates:
     schedule:
       interval: "daily"
 
-  - package-ecosystem: "npm"
+  - package-ecosystem: "pnpm"
     directory: "/frontend/"
     target-branch: "dev"
     schedule:
