@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/Grezy-Software/Nango/compare/v1.0.0...v1.1.0) (2024-06-25)
+
+
+### Features
+
+* **ruff:** addpre-commit config ([9a06e35](https://github.com/Grezy-Software/Nango/commit/9a06e35cad7d489129174f05de6d41cc0f73a90f))
+
 # 1.0.0 (2024-06-25)
 
 
