@@ -87,6 +87,8 @@ dmypy.json
 
 # Nango
 setup/requirements/full-requirements.txt
+backend/.envs/.development
+backend/.envs/.production
 
 # -------------------------------------------------------------------------------------------------
 # Frontend
