@@ -1,4 +1,4 @@
-drf-spectacular==0.27.1             # https://github.com/tfranzel/drf-spectacular
+drf-spectacular==0.27.2             # https://github.com/tfranzel/drf-spectacular
 
 # Mkdocs Documentation
 mkdocs-material==9.5.27             # https://github.com/squidfunk/mkdocs-material
