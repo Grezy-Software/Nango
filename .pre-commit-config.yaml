@@ -7,4 +7,4 @@ repos:
       - id: ruff-format
       # Run the linter.
       - id: ruff
-        entry: ruff check --force-exclude --config .github/pyproject.toml
+        entry: ruff check --force-exclude --config ./pyproject.toml

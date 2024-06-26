@@ -15,8 +15,15 @@ source .venv/bin/activate
 printf "Virtual python environment has been activated.\n"
 curl -sS https://bootstrap.pypa.io/get-pip.py | python3.11
 pip install pip-tools
+
+# Install requirements
 printf "Compiling requirements... This may take a few minutes.\n"
 pip-compile ./setup/requirements/requirements.txt --output-file ./setup/requirements/full-requirements.txt --resolver=backtracking --strip-extras
 pip install -r ./setup/requirements/full-requirements.txt
+
+# Install pre-commit hooks
 pre-commit install
+# Generate .envs files
+python ./setup/env_file_generator.py development
+
 printf "Done installing requirements for local .venv!\nHave fun coding!\n"
