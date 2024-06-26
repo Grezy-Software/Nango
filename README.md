@@ -24,17 +24,27 @@ The workflow is simple:
 
 - Django
     - [ ] Structure
-    - [ ] Tools
+    - [ ] Settings
+        - [ ] envs files generator
+    - [x] Ruff
+    - [x] Requirements
+    - [ ] Celery
+    - [ ] JWT
 - NextJs
     - [ ] Structure
-    - [ ] Tools
+    - [ ] Tailwind
+    - [ ] Typescript
+    - [ ] Eslint
+    - [ ] Shadcn
 - Github
-    - [ ] Dependabot (front & back)
-    - [ ] Pre-commit hook (ruff)
+    - [x] Dependabot (front & back)
+    - [ ] CI (Tests, Lint, Build)
+    - [x] Pre-commit hook (ruff)
 - Docker
     - [ ] Development docker compose (hard coded)
     - [ ] Production docker compose (variables)
-- [ ] JWT 
+- [x] Semantic release
+- [x] Mkdocs
 
 ### Bridge
 

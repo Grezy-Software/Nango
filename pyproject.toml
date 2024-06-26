@@ -3,7 +3,7 @@
 lint.select = [
     "F", "E", "W", "C90", "I", "N", "D", "UP", "YTT", "ANN", "ASYNC", "TRIO", "S", "BLE", "FBT", "B", "A", "C", "COM", "CPY", "C4", "DTZ","T10","DJ",
     "EM", "FA", "ISC", "ICN", "LOG", "G", "INP", "PIE", "T20", "PYI", "PT", "Q", "RSE", "RET", "SLF", "SLOT", "SIM", "TID", "TCH", "INT", "ARG", 
-    "PTH", "TD", "FIX", "ERA", "PD", "PGH", "PL", "TRY", "FLY", "NPY", "AIR", "PERF", "FYRB", "RUF"
+    "PTH", "TD", "FIX", "ERA", "PD", "PGH", "PL", "TRY", "FLY", "NPY", "AIR", "PERF", "FURB", "RUF"
     ]
 lint.ignore = [
     # Ruff formatter recommendations

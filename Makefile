@@ -15,7 +15,7 @@ else
 endif
 
 setup:
-	make setup-front
+	# make setup-front
 	make setup-back
 
 
