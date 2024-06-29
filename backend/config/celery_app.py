@@ -12,9 +12,7 @@ else:
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings.production")
 
 
-# set the default Django settings module for the 'celery' program.
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "tests.test_app.settings")
-celery_app = celery.Celery("django_napse")
+celery_app = celery.Celery("Nango")
 
 
 # Using a string here means the worker doesn't have to serialize
@@ -48,4 +46,4 @@ def strategy_log_free(*args: list, **kwargs: dict) -> callable:
 
 
 # Load task modules from all registered Django app configs.
-celery_app.autodiscover_tasks()
+celery_app.autodiscover_tasks(lambda: settings.INSTALLED_APPS)
