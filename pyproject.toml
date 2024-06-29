@@ -26,6 +26,7 @@ lint.ignore = [
     "D107",             # Docstring in __init__
     "D100",             # Module documentation
     "D104",             # Docstring in public package
+    "PGH004",           # Noqa all
     # Deprecated
     "ANN101",
     "ANN102",

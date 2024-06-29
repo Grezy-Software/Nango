@@ -46,4 +46,4 @@ def strategy_log_free(*args: list, **kwargs: dict) -> callable:
 
 
 # Load task modules from all registered Django app configs.
-celery_app.autodiscover_tasks(lambda: settings.INSTALLED_APPS)
+celery_app.autodiscover_tasks()
