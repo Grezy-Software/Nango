@@ -23,9 +23,9 @@ lint.ignore = [
 
     # Other
     "PLR0913",          # Less than 5 arguments
-    "D107",             # Missing docstring in __init__
+    "D107",             # Docstring in __init__
     "D100",             # Module documentation
-    
+    "D104",             # Docstring in public package
     # Deprecated
     "ANN101",
     "ANN102",

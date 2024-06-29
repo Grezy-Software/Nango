@@ -25,11 +25,14 @@ The workflow is simple:
 - Django
     - [ ] Structure
     - [ ] Settings
-        - [ ] envs files generator
+        - [x] envs files generator
     - [x] Ruff
     - [x] Requirements
     - [ ] Celery
-    - [ ] JWT
+    - [ ] API
+        - [ ] Structure
+        - [ ] Libraries
+        - [ ] JWT
 - NextJs
     - [ ] Structure
     - [ ] Tailwind
