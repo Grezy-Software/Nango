@@ -70,6 +70,8 @@ def build_django_secrets(env_name: str) -> None:
     content += f'DJANGO_SECRET_KEY="{get_or_generate_key(name="DJANGO_SECRET_KEY")}" # noqa: S105\n'
     content += "DJANGO_DEBUG=True\n"
     content += "IS_LOCAL=True\n"
+    content += f'DJANGO_SETTINGS_MODULE="config.settings.{env_name}"\n'
+    content += "\n# Celery\n"
     content += f'CELERY_FLOWER_USER="{get_or_generate_key(name="CELERY_FLOWER_USER")}"\n'
     content += f'CELERY_FLOWER_PASSWORD="{get_or_generate_key(name= "CELERY_FLOWER_PASSWORD", multiplier=2)}" # noqa: S105\n'
 
