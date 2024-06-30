@@ -19,7 +19,7 @@ def _generate_key(multiplier: int = 1) -> str:
 def get_or_generate_key(name: str, multiplier: int = 1) -> str:
     """Return the key if it exists, otherwise generate a new key."""
     result = os.environ.get(name, None)
-    if result is None:
+    if result is None or result == "":
         result = _generate_key(multiplier)
     return result
 
@@ -46,7 +46,7 @@ def build_postgres_env(env_name: str) -> None:
     content += "# ------------------------------------------------------------------------------\n"
     content += 'POSTGRES_HOST = "postgres"\n'
     content += "POSTGRES_PORT = 5432\n"
-    content += 'POSTGRES_DB = "napse_developer_toolkit"\n'
+    content += 'POSTGRES_DB = "Nango"\n'
     content += f'POSTGRES_USER = "{get_or_generate_key(name="POSTGRES_USER")}"\n'
     content += f'POSTGRES_PASSWORD = "{get_or_generate_key(name="POSTGRES_PASSWORD", multiplier=2)}" # noqa: S105\n'
 

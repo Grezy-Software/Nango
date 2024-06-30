@@ -18,7 +18,10 @@ setup:
 	# make setup-front
 	make setup-back
 
-
+up: 
+	docker compose -f docker/development-postgres.yml up -d --build --remove-orphans
+down:
+	docker compose -f docker/development-postgres.yml down
 
 bridge:
 	echo -e "Work in progress..."

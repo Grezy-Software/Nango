@@ -1,0 +1,100 @@
+name: nango-postgres
+
+volumes:
+  nango_dev_postgres_data: {}
+  nango_dev_postgres_data_backups: {}
+
+services:
+  django: &django
+    build: 
+      context: ..
+      dockerfile: ./docker/compose/development/django/Dockerfile
+    image: nango
+    container_name: nango_dev_django
+    # platform: linux/x86_64
+    depends_on:
+      - postgres
+      - redis
+    volumes:
+      - ../.:/app:z
+    environment:
+      DB_SETUP: postgres
+    env_file:
+      - ../backend/.envs/.development/.django
+      - ../backend/.envs/.development/.postgres
+    command: /start.sh
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.django.rule=Host(`localhost`)"
+      - "traefik.http.routers.django.entrypoints=web"
+    expose:
+      - "8000"
+
+  postgres:
+    image: postgres:14
+    container_name: nango_dev_postgres
+    volumes:
+      - nango_dev_postgres_data:/var/lib/postgresql/data:Z
+      - nango_dev_postgres_data_backups:/backups:z
+    env_file:
+      - ../backend/.envs/.development/.postgres
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: redis:6
+    container_name: nango_dev_redis
+
+  celeryworker:
+    <<: *django
+    container_name: nango_dev_celeryworker
+    depends_on:
+      - redis
+      - postgres
+      - django
+    ports: []
+    command: /start-celeryworker.sh
+    labels:
+      - "traefik.enable=false"
+
+  celerybeat:
+    <<: *django
+    container_name: nango_dev_celerybeat
+    depends_on:
+      - redis
+      - postgres
+      - django
+    ports: []
+    command: /start-celerybeat.sh
+    labels:
+      - "traefik.enable=false"
+
+  flower:
+    <<: *django
+    container_name: nango_dev_flower
+    command: /start-flower.sh
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.flower.rule=Host(`localhost`)"
+      - "traefik.http.routers.flower.entrypoints=flower"
+    expose:
+      - "5555"
+
+  traefik:
+    image: "traefik:v2.9.5"
+    container_name: nango_dev_traefik
+    command:
+      - "--log.level=DEBUG"
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.web.address=:8000"
+      - "--entrypoints.frontend.address=:3005"
+      - "--entrypoints.flower.address=:5555"
+    ports:
+      - "5555:5555"
+      - "8000:8000"
+      - "8080:8080"
+      - "3005:3005"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"

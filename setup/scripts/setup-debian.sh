@@ -18,7 +18,7 @@ pip install pip-tools
 
 # Install requirements
 printf "Compiling requirements... This may take a few minutes.\n"
-pip-compile ./setup/requirements/requirements.txt --output-file ./setup/requirements/full-requirements.txt --resolver=backtracking --strip-extras
+pip-compile ./setup/requirements/development.txt --output-file ./setup/requirements/full-requirements.txt --resolver=backtracking --strip-extras
 pip install -r ./setup/requirements/full-requirements.txt
 
 # Install pre-commit hooks
