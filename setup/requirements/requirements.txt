@@ -1,5 +1,0 @@
--r ./docs.txt
-
-ruff==0.5.0
-pre-commit==3.7.1
-cryptography==42.0.8

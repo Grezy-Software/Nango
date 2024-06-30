@@ -39,13 +39,17 @@ The workflow is simple:
     - [ ] Typescript
     - [ ] Eslint
     - [ ] Shadcn
+
 - Github
     - [x] Dependabot (front & back)
     - [ ] CI (Tests, Lint, Build)
     - [x] Pre-commit hook (ruff)
+
 - Docker
     - [ ] Development docker compose (hard coded)
     - [ ] Production docker compose (variables)
+
+- [ ] Litestream
 - [x] Semantic release
 - [x] Mkdocs
 
